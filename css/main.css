@@ -4,6 +4,12 @@
 
 body {
     margin: 0;
+    text-align: center;
+    background-color: lightyellow;
+}
+
+.gallery-page {
+    display: grid;
 }
 
 .grid-container {
@@ -20,4 +26,17 @@ body {
 img {
     display: block;
     width: 100%;
+}
+
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    border: solid;
 }
