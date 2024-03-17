@@ -32,11 +32,23 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 canvas {
+    display: none;
     width: 400px;
     height: 400px;
     background-color: whitesmoke;
     border: solid;
+    margin-bottom: 30px;
+}
+
+.text {
+    display: none;
+    margin-top: 30px;
+}
+
+.caption {
+    display: none;
 }

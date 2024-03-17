@@ -19,7 +19,7 @@ function drawImg(meme) {
     const elImg = new Image()
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-        drawText('Top Text', gElCanvas.width / 2, gElCanvas.height / 5)
+        drawText(prompt(), gElCanvas.width / 2, gElCanvas.height / 5)
     }
     elImg.src = `img/${meme.id}.jpg`
 
