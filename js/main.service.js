@@ -54,5 +54,13 @@ function setLineTxt() {
     const meme = getMeme(selectedMemeId)
     drawImg(meme)
 
+}
+//work in progress....
+function onDownloadMeme() {
+    var elLink = `img/${selectedMemeId}.jpg`
+    elLink.href = '#'
+    const dataUrl = gCanvas.toDataURL()
 
+    elLink.href = dataUrl
+    elLink.download = 'my-img'
 }
