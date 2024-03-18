@@ -41,12 +41,14 @@ function onMemePicked(id) {
     var set = document.querySelector('.caption')
     var download = document.querySelector('.download')
     var color = document.querySelector('.color-container')
+    var font = document.querySelector('.fontSize')
     gallery.style.display = 'none'
     canvas.style.display = 'block'
     // text.style.display = 'block'
     set.style.display = 'block'
     download.style.display = 'block'
     color.style.display = 'block'
+    font.style.display = 'block'
 
     const meme = getMeme(id)
     drawImg(meme)

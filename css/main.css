@@ -57,6 +57,19 @@ canvas {
     display: none;
 }
 
-.color-container{
+.color-container {
     display: none;
+}
+
+.fontSize {
+    display: none;
+}
+
+header>* {
+    background-color: rgba(255, 84, 72, 0.446);
+    border: solid;
+
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
 }
