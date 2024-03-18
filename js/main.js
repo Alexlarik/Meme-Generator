@@ -3,6 +3,7 @@
 let gElCanvas
 let gCtx
 let gColor
+let gFontSize = '20px'
 
 function onInit() {
     createId()
@@ -15,8 +16,24 @@ function onInit() {
 function pickColor() {
     var elColor = document.querySelector('.color')
     gColor = elColor.value
+
+    const meme = getMeme(selectedMemeId)
+    setLineTxt(meme)
+
     console.log(gColor)
 }
+
+function pickFont() {
+
+    const fontSize = prompt('Enter font size:')
+    gFontSize = fontSize + 'px'
+
+    const meme = getMeme(selectedMemeId)
+    setLineTxt(meme)
+
+    console.log(gFontSize)
+}
+
 function drawText(text, x, y) {
     gCtx.lineWidth = 3
     // gCtx.fillStyle = gColor
@@ -27,7 +44,7 @@ function drawText(text, x, y) {
     //     gCtx.strokeStyle = color
     // }
 
-    gCtx.font = '20px Times New Roman'
+    gCtx.font = gFontSize + ' Times New Roman'
     gCtx.textAlign = 'center'
     gCtx.textBaseline = 'center'
 

@@ -19,7 +19,7 @@ function drawImg(meme) {
     const elImg = new Image()
     elImg.onload = () => {
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-        drawText(prompt(), gElCanvas.width / 2, gElCanvas.height / 5)
+        drawText(prompt('Enter Caption!'), gElCanvas.width / 2, gElCanvas.height / 5)
     }
     // elImg.crossOrigin = 'Anonymous'
     elImg.src = `img/${meme.id}.jpg`
