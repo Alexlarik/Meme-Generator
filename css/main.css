@@ -52,3 +52,11 @@ canvas {
 .caption {
     display: none;
 }
+
+.download {
+    display: none;
+}
+
+.color-container{
+    display: none;
+}

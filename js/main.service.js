@@ -37,15 +37,20 @@ function onMemePicked(id) {
     selectedMemeId = id
     var canvas = document.querySelector('canvas')
     var gallery = document.querySelector('.grid-container')
-    var text = document.querySelector('.text')
+    // var text = document.querySelector('.text')
     var set = document.querySelector('.caption')
+    var download = document.querySelector('.download')
+    var color = document.querySelector('.color-container')
     gallery.style.display = 'none'
     canvas.style.display = 'block'
-    text.style.display = 'block'
+    // text.style.display = 'block'
     set.style.display = 'block'
+    download.style.display = 'block'
+    color.style.display = 'block'
 
     const meme = getMeme(id)
     drawImg(meme)
+
 
 }
 function setLineTxt() {
@@ -55,11 +60,11 @@ function setLineTxt() {
     drawImg(meme)
 
 }
-//work in progress....
-function onDownloadMeme() {
-    var elLink = `img/${selectedMemeId}.jpg`
+
+function onDownloadMeme(elLink) {
+
     elLink.href = '#'
-    const dataUrl = gCanvas.toDataURL()
+    const dataUrl = gElCanvas.toDataURL()
 
     elLink.href = dataUrl
     elLink.download = 'my-img'

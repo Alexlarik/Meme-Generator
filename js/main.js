@@ -2,6 +2,7 @@
 
 let gElCanvas
 let gCtx
+let gColor
 
 function onInit() {
     createId()
@@ -11,9 +12,20 @@ function onInit() {
 
 }
 
+function pickColor() {
+    var elColor = document.querySelector('.color')
+    gColor = elColor.value
+    console.log(gColor)
+}
 function drawText(text, x, y) {
     gCtx.lineWidth = 3
-    gCtx.strokeStyle = 'black'
+    // gCtx.fillStyle = gColor
+    gCtx.strokeStyle = gColor
+    // if (color = undefined) {
+    // }
+    // else {
+    //     gCtx.strokeStyle = color
+    // }
 
     gCtx.font = '20px Times New Roman'
     gCtx.textAlign = 'center'
