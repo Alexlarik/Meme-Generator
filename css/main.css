@@ -61,7 +61,15 @@ canvas {
     display: none;
 }
 
-.fontSize {
+.font-size {
+    display: none;
+}
+
+.add-line {
+    display: none;
+}
+
+.switch-line {
     display: none;
 }
 

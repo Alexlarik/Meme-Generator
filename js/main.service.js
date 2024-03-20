@@ -3,14 +3,12 @@ var selectedMemeId
 var gMemes = []
 var gMeme = {
     selectedImgId: 1,
-    selectedLineIdx: 1,
-    lines: [
-        {
-            txt: 'Enter Text',
-            size: 20,
-            color: 'black'
-        }
-    ]
+    selectedLineIdx: 0,
+    color: 'black',
+    size: '20px',
+    pos_y: 2,
+    pos_x: 2,
+    lines: []
 }
 
 function getMeme(id) {
@@ -35,31 +33,36 @@ function createId() {
 
 function onMemePicked(id) {
     selectedMemeId = id
-    var canvas = document.querySelector('canvas')
-    var gallery = document.querySelector('.grid-container')
-    // var text = document.querySelector('.text')
-    var set = document.querySelector('.caption')
-    var download = document.querySelector('.download')
-    var color = document.querySelector('.color-container')
-    var font = document.querySelector('.fontSize')
+    const canvas = document.querySelector('canvas')
+    const gallery = document.querySelector('.grid-container')
+    const set = document.querySelector('.caption')
+    const download = document.querySelector('.download')
+    const color = document.querySelector('.color-container')
+    const font = document.querySelector('.font-size')
+    const addLine = document.querySelector('.add-line')
+    const switchLine = document.querySelector('.switch-line')
     gallery.style.display = 'none'
     canvas.style.display = 'block'
-    // text.style.display = 'block'
     set.style.display = 'block'
     download.style.display = 'block'
     color.style.display = 'block'
     font.style.display = 'block'
+    addLine.style.display = 'block'
+    switchLine.style.display = 'block'
 
     const meme = getMeme(id)
     drawImg(meme)
 
-
 }
+
 function setLineTxt() {
 
     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
     const meme = getMeme(selectedMemeId)
     drawImg(meme)
+    gMeme.lines = []
+    console.log(gMeme)
+
 
 }
 

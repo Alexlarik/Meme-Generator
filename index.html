@@ -19,20 +19,24 @@
     <section class="canvas-container">
         <canvas></canvas>
         <p>
-            <button class="caption" onclick="setLineTxt()">Add a Caption!</button>
+            <button class="caption" onclick="setLineTxt()">New Caption!</button>
         </p>
         <p class="color-container">
-            <!-- <button class="color" onclick="pickColor()">Pick Color!</button> -->
             <td>Pick Message Color:<input class="color" type="color" id="color" name="color" form="frmRegister"
                     value="#ff0000" onchange="pickColor()" /></td>
         </p>
         <p>
-            <button class="fontSize" onclick="pickFont()">Pick font Size:</button>
+            <button class="font-size" onclick="pickFont()">Enter font Size:</button>
         </p>
         <p>
             <a class="download" href="#" onclick="onDownloadMeme(this)" download="meme.jpg">Download</a>
         </p>
-        <!-- <input class="text" type="text" placeholder="Add a Caption!"> -->
+        <p>
+            <button class="add-line" onclick="addLine()">Add Line!</button>
+        </p>
+        <p>
+            <button class="switch-line" onclick="switchLine()">Switch Line!</button>
+        </p>
     </section>
     <section class="gallery-page">
         <section class="grid-container">
