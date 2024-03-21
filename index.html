@@ -23,50 +23,55 @@
     </header>
     <section class="canvas-container">
         <canvas class="canvas"></canvas>
-        <p>
-        <p>
-            <button class="add-line" onclick="addLine()">Add Line!
-                <input type="text" class="caption-input" placeholder="Enter Caption">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-        </p>
-        <button class="caption" onclick="setLineTxt()">New Caption!
-            <input type="text" class="new-caption" placeholder="Enter Caption">
-            <i class="fa-solid fa-pen"></i>
-        </button>
-        </p>
-        <p class="color-container">
-            <td>Pick Message Color:<input class="color" type="color" id="color" name="color" form="frmRegister"
-                    value="#000000" onchange="pickColor()" /></td>
-        </p>
-        <p>
-            <button class="font-size" onclick="pickFont()">Enter font Size:
-                <i class="fa-solid fa-font"></i></button>
-        </p>
-        <p>
-            <button class="switch-line" onclick="switchLine()">Switch Line!
-                <i class="fa-solid fa-repeat"></i></button>
-        </p>
-        <p>
-            <a class="download" href="#" onclick="onDownloadMeme(this)" download="meme.jpg">Download
-                <i class="fa-solid fa-download"></i></a>
-        </p>
-    </section>
-    <section class="gallery-page">
-        <section class="grid-container">
-            <!-- images here -->
+        <section class="editor">
+            <section>
+                <p>
+                    <button class="add-line" onclick="addLine()">Add Line!
+                        <input type="text" class="caption-input" placeholder="Enter Caption">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </p>
+                <button class="caption" onclick="setLineTxt()">New Caption!
+                    <input type="text" class="new-caption" placeholder="Enter Caption">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                </p>
+                <p class="color-container">
+                    <button>
+                        <td>Pick Message Color:<input class="color" type="color" id="color" name="color"
+                                form="frmRegister" value="#000000" onchange="pickColor()" /></td>
+                    </button>
+                </p>
+                <p>
+                    <button class="font-size" onclick="pickFont()">Font!
+                        <input type="text" class="font" placeholder="Enter Font Size:">
+                        <i class="fa-solid fa-font"></i></button>
+                </p>
+                <p>
+                    <button class="switch-line" onclick="switchLine()">Switch Line!
+                        <i class="fa-solid fa-repeat"></i></button>
+                </p>
+                <p>
+                    <a class="download" href="#" onclick="onDownloadMeme(this)" download="meme.jpg">Download
+                        <i class="fa-solid fa-download"></i></a>
+                </p>
+            </section>
         </section>
-    </section>
-    <footer>
-        <div>Meme Generator<i class="fa-brands fa-meetup"></i>@Coffee Rights</div>
-    </footer>
+        <section class="gallery-page">
+            <section class="grid-container">
+                <!-- images here -->
+            </section>
+        </section>
+        <footer>
+            <div>Meme Generator<i class="fa-brands fa-meetup"></i>@Coffee Rights</div>
+        </footer>
 
 
 
-    <script src="js/main.js"></script>
-    <script src="js/main.service.js"></script>
-    <script src="js/main.controller.js"></script>
-    <script src="js/storage.service.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/main.service.js"></script>
+        <script src="js/main.controller.js"></script>
+        <script src="js/storage.service.js"></script>
 
 </body>
 <script src="https://kit.fontawesome.com/dd2d58983d.js" crossorigin="anonymous"></script>

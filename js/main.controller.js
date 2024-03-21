@@ -65,11 +65,14 @@ function pickColor() {
 }
 
 function pickFont() {
+    const captionInput = document.querySelector('.font')
+    const fontSize = captionInput.value
+    // gMeme.selectedLineIdx++
 
-    const fontSize = prompt('Enter font size:')
-    gFontSize = fontSize + 'px'
-    gMeme.font = gFontSize
-
+    if (fontSize !== '') {
+        gFontSize = fontSize + 'px'
+        gMeme.font = gFontSize
+    }
     // const meme = getMeme(selectedMemeId)
     // setLineTxt(meme)
 
@@ -78,10 +81,10 @@ function pickFont() {
 
 function addLine() {
     const captionInputs = document.querySelectorAll('.caption-input')
-    
-    captionInputs.forEach(function(captionInput) {
-        const text = captionInput.value.trim()
-        if (text !== '') { 
+
+    captionInputs.forEach(function (captionInput) {
+        const text = captionInput.value
+        if (text !== '') {
             gMeme.lines.push(text)
             drawText(text, gElCanvas.width / gMeme.pos_x, gElCanvas.height / gMeme.pos_y)
             gMeme.pos_y++
@@ -92,7 +95,7 @@ function addLine() {
         }
     })
 }
-//work in progress..
+//done for now
 function switchLine() {
     if (gMeme.lines.length < 2) return
 

@@ -1,17 +1,17 @@
 'use strict'
-
+////
 var selectedMemeId
 var gMemes = []
 var gMeme = {
     selectedImgId: 1,
-    selectedLineIdx: 0,
+    selectedLineIdx: 1,
     color: 'black',
     size: '20px',
     pos_y: 2,
     pos_x: 2,
     lines: []
 }
-
+////
 function getMeme(id) {
     const meme = {
         id,
@@ -35,6 +35,7 @@ function createId() {
 function setLineTxt() {
     const captionInput = document.querySelector('.new-caption')
     const text = captionInput.value
+    // gMeme.selectedLineIdx++
 
     if (text !== '') {
         gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
