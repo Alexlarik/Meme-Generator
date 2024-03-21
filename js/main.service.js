@@ -1,4 +1,5 @@
 'use strict'
+
 var selectedMemeId
 var gMemes = []
 var gMeme = {
@@ -31,39 +32,15 @@ function createId() {
 
 }
 
-function onMemePicked(id) {
-    selectedMemeId = id
-    const canvas = document.querySelector('canvas')
-    const gallery = document.querySelector('.grid-container')
-    const set = document.querySelector('.caption')
-    const download = document.querySelector('.download')
-    const color = document.querySelector('.color-container')
-    const font = document.querySelector('.font-size')
-    const addLine = document.querySelector('.add-line')
-    const switchLine = document.querySelector('.switch-line')
-    gallery.style.display = 'none'
-    canvas.style.display = 'block'
-    set.style.display = 'block'
-    download.style.display = 'block'
-    color.style.display = 'block'
-    font.style.display = 'block'
-    addLine.style.display = 'block'
-    switchLine.style.display = 'block'
-
-    const meme = getMeme(id)
-    drawImg(meme)
-
-}
-
 function setLineTxt() {
+    const captionInput = document.querySelector('.new-caption')
+    const text = captionInput.value
 
-    gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
-    const meme = getMeme(selectedMemeId)
-    drawImg(meme)
-    gMeme.lines = []
-    console.log(gMeme)
-
-
+    if (text !== '') {
+        gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
+        const meme = getMeme(selectedMemeId);
+        drawImg(meme)
+    }
 }
 
 function onDownloadMeme(elLink) {
