@@ -6,36 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/editor.css">
 </head>
 
 <body onload="onInit()">
     <div class="main-screen"></div>
     <header>
         <nav>
-            <h1>Meme Generator</h1>
-            <div><a href="index.html">Index</a></div>
+            <h1>Meme Generator
+                <i class="fa-brands fa-meetup"></i>
+            </h1>
+            <div><a class="index" href="index.html">Gallery
+                    <i class="fa-solid fa-images"></i>
+                </a></div>
         </nav>
     </header>
     <section class="canvas-container">
         <canvas class="canvas"></canvas>
         <p>
-            <button class="caption" onclick="setLineTxt()">New Caption!</button>
+        <p>
+            <button class="add-line" onclick="addLine()">Add Line!
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </p>
+        <button class="caption" onclick="setLineTxt()">New Caption!
+            <i class="fa-solid fa-pen"></i>
+        </button>
         </p>
         <p class="color-container">
             <td>Pick Message Color:<input class="color" type="color" id="color" name="color" form="frmRegister"
-                    value="#ff0000" onchange="pickColor()" /></td>
+                    value="#000000" onchange="pickColor()" /></td>
         </p>
         <p>
-            <button class="font-size" onclick="pickFont()">Enter font Size:</button>
+            <button class="font-size" onclick="pickFont()">Enter font Size:
+                <i class="fa-solid fa-font"></i></button>
         </p>
         <p>
-            <a class="download" href="#" onclick="onDownloadMeme(this)" download="meme.jpg">Download</a>
+            <button class="switch-line" onclick="switchLine()">Switch Line!
+                <i class="fa-solid fa-repeat"></i></button>
         </p>
         <p>
-            <button class="add-line" onclick="addLine()">Add Line!</button>
-        </p>
-        <p>
-            <button class="switch-line" onclick="switchLine()">Switch Line!</button>
+            <a class="download" href="#" onclick="onDownloadMeme(this)" download="meme.jpg">Download
+                <i class="fa-solid fa-download"></i></a>
         </p>
     </section>
     <section class="gallery-page">
@@ -43,7 +55,9 @@
             <!-- images here -->
         </section>
     </section>
-    <footer>Footer:</footer>
+    <footer>
+        <div>Meme Generator<i class="fa-brands fa-meetup"></i>@Coffee Rights</div>
+    </footer>
 
 
 
@@ -53,5 +67,6 @@
     <script src="js/storage.service.js"></script>
 
 </body>
+<script src="https://kit.fontawesome.com/dd2d58983d.js" crossorigin="anonymous"></script>
 
 </html>

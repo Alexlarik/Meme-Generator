@@ -1,0 +1,59 @@
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+canvas {
+    display: none;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    border: solid rgb(0, 32, 63);
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+.text {
+    display: none;
+    margin-top: 30px;
+}
+
+.caption {
+    display: none;
+}
+
+.download {
+    display: none;
+}
+
+.color-container {
+    display: none;
+}
+
+.font-size {
+    display: none;
+}
+
+.add-line {
+    display: none;
+}
+
+.switch-line {
+    display: none;
+}
+
+button {
+    color: rgb(173, 239, 209, 1);
+    background-color: rgb(0, 32, 63);
+    font-size: large;
+    cursor: pointer;
+
+}
+
+a {
+    color: rgb(173, 239, 209, 1);
+    background-color: rgb(0, 32, 63);
+}
