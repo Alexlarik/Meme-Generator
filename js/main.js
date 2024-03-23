@@ -4,9 +4,9 @@ let gElCanvas
 let gCtx
 let gColor
 let gFontSize
-let gStartPos
-let isDragging = false
-const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']
+// let gStartPos
+// let isDragging = false
+// const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']
 ////
 
 function onInit() {

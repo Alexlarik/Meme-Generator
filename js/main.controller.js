@@ -75,6 +75,7 @@ function pickFont() {
     }
     // const meme = getMeme(selectedMemeId)
     // setLineTxt(meme)
+    captionInput.value = ''
 
     console.log(gFontSize)
 }
