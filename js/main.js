@@ -23,6 +23,11 @@ function onInit() {
 
 }
 
+function test(){
+    console.log('hi')
+}
+test()
+
 function drawText(text, x, y) {
     gCtx.lineWidth = 3
     gCtx.strokeStyle = gColor
